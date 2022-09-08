@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMPLOYEE FORM</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .parent{
+            width:100%;
+            float:center;
+        }
+        .header{
+            background-image: url(https://image.shutterstock.com/image-illustration/triangle-solid-black-golden-illustration-260nw-1862937556.jpg);
+            text-align: center;
+           
+            border:2px solid brown;
+            color:white;
+            padding: 10px;
+        }
+        .left{
+            width: 30%;
+            height:300px;
+            outline-style: dashed;
+            border-style:ridge dashed dotted solid;
+            border-radius: 20px 20px 30px 35px; 
+            background-color: rgb(132, 212, 234);
+            border:2px solid rgb(96, 6, 89);
+            float:left;
+            box-shadow: 10px 15px 10px rgb(57, 53, 53);
+        }
+        .center{
+            width: 40%;
+            height:650px;
+            outline-style: dashed;
+            border-style:ridge dashed dotted solid;
+            border-radius: 20px 20px 30px 35px; 
+            box-shadow: 10px 15px 10px rgb(57, 53, 53);
+            border-width:2px 3px 4px 5px;
+            background-color: rgb(132, 212, 234);
+            border:2px solid darkblue;
+            float:left;
+            
+        }
+        .right{
+            width: 30%;
+            height:300px;
+            outline-style: dashed;
+            border-style:ridge dashed dotted solid;
+            border-radius: 20px 20px 30px 35px; 
+            background-color: rgb(132, 212, 234);
+            border:2px solid rgb(4, 63, 25);
+            float:right;
+            box-shadow: 10px 15px 10px rgb(57, 53, 53);
+        }
+        .footer{
+            text-align: center;
+            background-color: rgb(212, 193, 193);
+            border:2px solid brown;
+            color:rgb(3, 3, 3);
+            padding: 20px;
+        }
+        .vertical{
+            list-style-type: none;
+            margin:0;
+            margin-top: 20px;
+            padding:10px;
+            width:200px;
+            position:sticky;
+            overflow:auto;
+            height:100%;
+        }
+        li a.verticalnav{
+            display:block;
+            color:darkblue;
+            text-align: left;
+            padding: 5px 5px;
+            text-decoration: none;
+            font-size: larger;
+        }
+        li a.verticalnav:hover{
+            background-color: aquamarine;
+        }
+        
+        #active{
+            background-color: rgb(211, 39, 39);
+        }
+
+        body{
+            background-image: url(https://image.shutterstock.com/image-illustration/triangle-solid-black-golden-illustration-260nw-1862937556.jpg);
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        .transition{
+            width:100px;
+            height:100px;
+            transition: width 2s,height 2s, transform 1s;
+        }
+        .transition:hover{
+            width:300px;
+            height:200px;
+            transform:rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="header">
+            <h1 style="text-align:center;color:rgb(255, 255, 255);background-color: rgb(103, 6, 163);">EMPLOYEE REGISTRATION FORM</h1>
+        </div>
+        <div>
+           
+            <div class="left">
+                <ul class="vertical">
+                    <li><a class="verticalnav" href="http://127.0.0.1:5501/basic.html" target="_blank">Home</a></li>
+                    <li><a class="verticalnav" href="forms.html" target="_blank">Fill Details</a></li>
+                    <li><a class="verticalnav">Update Documents</a></li>
+                    <li><a class="verticalnav" href="#" target="_blank">Fill Bank Details </a></li>
+                    <li><a id="active" class="verticalnav">Final submission</a></li>
+                    
+                </ul>
+            </div>
+           
+            <div class="center">
+                
+                    <legend style="color:crimson"><h2>Fill Details</h2></legend>
+                    <label>First Name</label>
+                    <input type="text" name="fname" required> &nbsp; &nbsp;
+                    <label>Middle Name</label>
+                    <input type="text" name="mname" required><br><br>
+                    <label>Last Name</label>&nbsp;
+                    <input type="text" name="lname" required><br><br>
+                    <label>Designation</label>
+                    <input type="text" name="dn" required>&nbsp; &nbsp;
+                    <label>Age</label>
+                    <input type="number" required min="21" max="25"><br><br>
+                    <label>Date of Birth</label><br>
+                    <input type="date" required><br><br>
+                    <label>Gender</label><br>
+                    <input type="radio" id="gender" name="gender" value="Female">Female<br>
+                    <input type="radio" id="gender" name="gender" value="Male">Male<br><br>
+                    <label>Address</label><br>
+                    <textarea></textarea><br><br>
+                    <label>Select Course</label><br>
+                    <select name="course">
+                        <optgroup label="DOTNET">
+                            <option>.NET MVC</option>
+                            <option>.NET CORE</option>
+                        </optgroup>
+                        <optgroup label="JAVA">
+                            <option>SPRING</option>
+                            <option>SPRING BOOT</option>
+                        </optgroup>
+                    </select><br><br>
+                    <label>Certifications Taken</label><br>
+                    <input type="checkbox" value="java"><label>Java</label><br>
+                    <input type="checkbox" value="python"><label>Python</label><br>
+                    <input type="checkbox" value=".NET"><label>.NET</label><br>
+                    <input type="checkbox" value="Database"><label>Database</label><br><br>
+                    <input type="submit">
+                    </fieldset>
+            </div>
+           
+            <div class="right">
+                <h2 type="text-align:center"></h2><h2> Demo video to fill form </h2>
+                <iframe width="150" height="200" style="margin-left:20px;margin-top:20px;" src="https://www.youtube.com/embed/yWLbby96IJ8">
+                </iframe>
+                
+            </div>
+
+</body>
+</html>
