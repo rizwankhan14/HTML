@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body>
+    
+
+<div class= "login">
+
+<form id="form-id" method="post" name = "myform"> 
+    <h1>Login Form</h1>
+
+<label>UserName</label><hr>
+
+<input type="text" name="username" id = "username"><br>
+
+<label>Email</label><br>
+
+<input type="email" name="email" id = "email"><br>
+
+<label>Password</label><br>
+
+<input type="password" name="password" id = "password"><br>
+
+<input type="button" value="Login" id="submit" onclick = "obj.form_details(this.form)">
+
+<input type="button" value="Cancel" id="Cancel"/><br>
+
+</form>
+
+</div>
+
+<script> 
+
+class Sector{
+
+constructor(username, email, password){
+
+this.username = username;
+
+this.email = email;
+
+this.password = password;
+}
+
+
+form_details(){
+
+if(this.username == "rizwan" && this.email == "rizwankhan586143786@gmail.com" && this.password == "qwert")
+{
+     document.write("Hurray! Login is successful");
+}
+
+else
+
+document.write("oops! Login is unsuccessful");
+}
+
+
+}
+var obj = new Sector();
+
+</script> 
+</body>
+</html>
